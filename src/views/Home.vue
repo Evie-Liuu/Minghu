@@ -1,9 +1,9 @@
 <template>
   <main
-    class="relative h-screen grid lg:grid-flow-col content-center lg:content-stretch lg:grid-rows-2 text-center font-bold bg-[url('@/assets/images/var02/Web_v2_Bcakground.webp')] bg-cover bg-center overflow-hidden lg:bg-[url('@/assets/images/var02/Backgound_v2_Hemei.webp')]"
+    class="relative h-screen grid lg:grid-flow-col content-center lg:content-stretch lg:grid-rows-2 text-center font-bold bg-[url('@/assets/images/Mobile/Web_Bcakground.webp')] bg-cover bg-center overflow-hidden lg:bg-[url('@/assets/images/Backgound.webp')]"
   >
     <img
-      src="@/assets/images/var02/Frame_v2_Hemei.png"
+      src="@/assets/images/Frame.png"
       alt="Top Frame"
       class="hidden lg:block absolute -top-3 left-0 w-full h-10 object-cover z-20 pointer-events-none"
     />
@@ -14,22 +14,22 @@
           'transition-all duration-3000 ease-out',
           isLoaded ? 'opacity-100' : 'opacity-0',
         ]"
-        class="lg:w-full lg:h-full flex items-center justify-center lg:justify-start lg:pe-8"
+        class="lg:w-full lg:h-full flex items-center justify-center lg:justify-center lg:pe-8"
       >
         <img
           :src="ChinesePaintingRing"
-          class="hidden lg:block pointer-events-none select-none"
+          class="pointer-events-none select-none"
           alt="Hemei_cover"
         />
-        <img
+        <!-- <img
           :src="ChinesePaintingRing_mobile"
           class="block lg:hidden pointer-events-none select-none"
           alt="Hemei_cover"
-        />
+        /> -->
       </div>
     </section>
     <!-- School Title -->
-    <section class="lg:col-span-1 lg:-ml-138 lg:mt-17 z-10">
+    <section class="lg:col-span-1 lg:-ml-108 lg:mt-10 z-10">
       <div
         :class="[
           'transition-all duration-3000 ease-out',
@@ -52,7 +52,7 @@
       </div>
     </section>
     <!-- Menu Buttons -->
-    <section class="lg:col-span-1 lg:-ml-178 lg:-mt-10 z-10">
+    <section class="lg:col-span-1 lg:-ml-178 z-10">
       <div
         :class="[
           'transition-all duration-3000 ease-out',
@@ -109,7 +109,7 @@
       </div>
     </section>
     <img
-      src="@/assets/images/var02/Frame_v2_Hemei.png"
+      src="@/assets/images/Frame.png"
       alt="Bottom Frame"
       class="hidden lg:block absolute -bottom-3 left-0 w-full h-10 object-cover rotate-180 z-20 pointer-events-none"
     />
@@ -117,14 +117,14 @@
 </template>
 <script setup>
 import { ref, onMounted } from "vue";
-import ChinesePaintingRing from "@/assets/images/var02/ChinesePaintingRing_v2_Hemei_2.webp";
-import ChinesePaintingRing_mobile from "@/assets/images/var02/Mobile_ChinesePaintingRing_v2_Hemei2.png";
-import paint1Unselected from "@/assets/images/var02/Paint_1_v2_Unselected.png";
-import paint1Selected from "@/assets/images/var02/Paint_1_v2_Selected.png";
-import paint2Unselected from "@/assets/images/var02/Paint_2_v2_Unselected.png";
-import paint2Selected from "@/assets/images/var02/Paint_2_v2_Selected.png";
-import paint3Unselected from "@/assets/images/var02/Paint_3_v2_Unselected.png";
-import paint3Selected from "@/assets/images/var02/Paint_3_v2_Selected.png";
+import ChinesePaintingRing from "@/assets/images/ChinesePaintingRing.webp";
+// import ChinesePaintingRing_mobile from "@/assets/images/Mobile_ChinesePaintingRing_v2_Hemei2.png";
+import paint1Unselected from "@/assets/images/Paint_1_Unselected.png";
+import paint1Selected from "@/assets/images/Paint_1_Selected.png";
+import paint2Unselected from "@/assets/images/Paint_2_Unselected.png";
+import paint2Selected from "@/assets/images/Paint_2_Selected.png";
+import paint3Unselected from "@/assets/images/Paint_3_Unselected.png";
+import paint3Selected from "@/assets/images/Paint_3_Selected.png";
 
 const hoveredIndex = ref(null);
 const isLoaded = ref(false);
