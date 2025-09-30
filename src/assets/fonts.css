@@ -1,0 +1,29 @@
+/* @font-face {
+    font-family: 'jf-openhuninn';
+    src: url('./fonts/jf-openhuninn-2.1.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+/* @font-face {
+    font-family: 'YRDZST';
+    src: url('./fonts/I.Ngaan-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+@font-face {
+    font-family: 'PenCrane';
+    /* src: url('./fonts/I.PenCrane-B-Regular.woff2') format('woff2'); */
+    src: url('./fonts/I.PenCrane-B-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* @font-face {
+    font-family: 'HanWangWeBe';
+    src: url('./fonts/HanWangWeBe-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+} */

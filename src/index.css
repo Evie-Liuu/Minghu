@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@theme {
+  --font-huninn: 'jf-openhuninn', 'sans-serif';
+
+  --color-brown-100: #DFD9C9;
+  --color-brown-400: #71451c;
+  --color-brown-600: #4A2C2A;
+  --color-gold-400: #CA9404;
+  --color-milktea-500: #CBB696;
+
+  --color-darkblue: #192A51;
+  --color-pblue-100: #B5D4D3;
+  --color-pblue-300: #82A0B8;
+  --color-pblue-700: #192A51;
+
+  --text-xl: 1.5rem;
+  --text-2xl: 1.75rem;
+  --text-3xl: 2.25rem;
+  --text-4xl: 2.5rem;
+  --text-5xl: 3.3rem;
+
+  --breakpoint-2xl: 99rem;
+
+  --animate-fade-in-left: fadeInLeft 0.8s ease-out forwards;
+  --animate-fade-in-up: fadeInUp 0.8s ease-out forwards;
+  --animate-fade-in-down: fadeInDown 0.8s ease-out forwards;
+}
+
+
+body {
+  /* font-family: 'YRDZST', sans-serif; */
+  /* font-family: 'PenCrane', sans-serif; */
+  font-family: "Zen Kurenaido", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.back-home-btn .icon {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .back-home-btn .text {
+    display: none;
+  }
+
+  .back-home-btn .icon {
+    display: inline;
+    font-size: 1.5rem;
+  }
+}
+
+
+.page-background {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url("@/assets/images/var02/Backgound_v2_N_Hemei.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 768px) {
+  .page-background {
+    background-image: url("@/assets/images/var02/Web_v2_N_Bcakground.webp");
+  }
+}
+
+.content-scroller {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  z-index: 1;
+  /* Ensure content is above clouds */
+}
+
+
+
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(244, 240, 237, 0.9);
+  /* 使用與主題相符的米色背景 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loading-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #192A51;
+  /* 使用與主題相符的棕色文字 */
+  display: flex;
+}
+
+.loading-text span {
+  animation: float 1.5s ease-in-out infinite;
+  animation-delay: calc(var(--i) * 0.1s);
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
