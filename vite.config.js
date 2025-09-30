@@ -10,6 +10,9 @@ export default defineConfig({
     tailwindcss()
   ],
   base: "/Minghu/",
+  build: {
+    outDir: "docs",  // 打包輸出到 docs/
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'), // @ 指向 src 目錄
